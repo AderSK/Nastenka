@@ -1,0 +1,208 @@
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-color;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0px;
+    font-size: $text-size;
+    font-family: $font-family;
+}
+
+.sidebar {
+    background: $my-black;
+    color: #818181;
+    flex: 1;
+    padding: 0px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-right: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar p {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    color: #455050;
+    display: block;
+    transition: 0.3s;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+}
+
+.column.bigger {
+    display: flex;
+    flex-direction: column;
+    flex: 25;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+}
+
+.card1 h2, .card2 h2, .card3 h2, .card4 h2{
+    font-size: 35px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.card1 {
+    flex-basis: 25%;
+    min-height: 15vh;
+    background: green;
+}
+
+.card2 {
+    flex-basis: 25%;
+    background: $my-blue;
+}
+
+.card3 {
+    flex-basis: 25%;
+    min-height: 15vh;
+    background: $my-yellow;
+}
+
+.card4 {
+    flex-basis: 25%;
+    background: red;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+.left-side {
+    flex-basis: 50%;
+}
+
+.right-side {
+    flex-basis: 50%;
+}
+
+.content-left {
+    flex-basis: 50%;
+    min-height: 40vh;
+    background: white;
+}
+
+.content-left-bot {
+    flex-basis: 50%;
+    min-height: 30vh;
+    background: white;
+}
+
+.content-right {
+    flex-basis: 50%;
+    min-height: 30vh;
+    background: white;
+}
+
+@media (max-width: 800px) {
+    .left-side, .right-side {
+      flex-basis: 100%;
+    }
+    .card1, .card2, .card3, .card4 {
+        flex-basis: 50%;
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar a{
+    height: 5vh;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar .search-container {
+    float: left;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 10px;
+    border-width: 1px;
+    border-color: $my-grey;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 7px 18px;
+    margin-top: 10px;
+    margin-right: 16px;
+    background: $my-blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: white;
+    height: 5vh;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.left-side div, .right-side div, .cards div {
+    border: 15px $bg-color solid;
+    padding: 10px;
+}
+
+#users {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#users td, #users th {
+    text-align: center;
+    padding: 8px;
+}
+
+#users tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#users th {
+    text-align: center;
+    background-color: $my-grey;
+    color: #f2f2f2;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}

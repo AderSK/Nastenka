@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dc805ad3a4.js" crossorigin="anonymous"></script>
+    <title>Nastenka</title>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#" style="background-color: rgb(61, 88, 211); color: white; height: 48px;text-align: left; padding-top: 12px;">DCSoft - Admin</a>
+    <br>
+    <br>
+    <a href="#"><i class="fa-solid fa-table-cells-large"></i> Nástěnka</a>
+    <br>
+    <p>Moduly</p>
+    <br>
+    <a href="#"><i class="fa-solid fa-bookmark"></i> Položky <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <a href="#"><i class="fa-solid fa-pen-to-square"></i> Příspěvky <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <a href="#"><i class="fa-solid fa-table"></i> Tabulky <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <a href="#"><i class="fa-solid fa-chart-bar"></i> Grafy <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <a href="#"><i class="fa-solid fa-map"></i> Mapy <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <br>
+    <p>Sekce</p>
+    <br>
+    <a href="#"><i class="fa-solid fa-envelope"></i> Pošta <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <a href="#"><i class="fa-solid fa-calendar-days"></i> Kalendář</a>
+    <a href="#"><i class="fa-solid fa-file-lines"></i> Stránky <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+    <a href="#"><i class="fa-solid fa-sitemap"></i> Struktura <span style="float: right;"><i class="fa-solid fa-chevron-left"></i></span></a>
+  </div>
+  <div class="column">
+    <div class="navbar">
+      <a href="#" onclick="document.getElementsByClassName('column')[0].classList.toggle('bigger')" style="padding-right: 20px; float: left;"><i class="fa-solid fa-bars" style="font-size: 20px; vertical-align: middle;"></i></a>
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Vyhledat" name="search">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+      <a style="float: right; padding-left: 0px;"> Admin <i class="fa-solid fa-chevron-down"></i></a>
+      <a style="float: right; padding-top: 10px;"> <img style="width: 30px;" src="img/profile.png" alt="Profile"> </a>
+    </div>
+    <main>
+      <div class="cards">
+        <div class="card1">
+          <h2>120</h2>
+          <p>NOVÝCH UŽIVATELŮ</p>
+          <p><i class="fa-solid fa-turn-up"></i> 10%</p>
+        </div>
+        <div class="card2">
+          <h2>2500</h2>
+          <p>ZOBRAZENÍ</p>
+          <p><i class="fa-solid fa-turn-up"></i> 25%</p>
+        </div>
+        <div class="card3">
+          <h2>270</h2>
+          <p>PROKLIKŮ</p>
+          <p><i class="fa-solid fa-turn-down"></i> -4%</p>
+        </div>
+        <div class="card4">
+          <h2>138</h2>
+          <p>SDÍLENÍ</p>
+          <p><i class="fa-solid fa-turn-down"></i> -8%</p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left-side">
+          <div class="content-left">
+            <h2 style="padding-left: 10px;">Statistika návštěvnosti</h2>
+            <p style="float: left; padding-left: 10px;"> <span style="color: rgb(61, 88, 211);">⬤</span> Minulý měsíc <span style="color: green;">⬤</span> Tento měsíc</p>
+            <p style="float: right; padding-right: 10px;">
+              <span style="font-size: 18px;"><i class="fa-solid fa-up-long" style="color: green;"></i> 10%</span>
+              <br>
+              Průmněrný nárůst
+            </p>
+            <img src="img/graf1.png" style="max-width: 100%; padding-top: 40px;" alt="Graph">
+          </div>
+          <div class="content-left-bot" style="padding: 0px;">
+            <table id="users">
+              <tr>
+                <th>Naposledy</th>
+                <th>ID</th>
+                <th>OS</th>
+                <th>Prohližeč</th>
+                <th>Dnes</th>
+                <th>Celkem</th>
+              </tr>
+              <tr>
+                <td>28.1.2021</td>
+                <td>100499</td>
+                <td>Windows 10</td>
+                <td>Chrome</td>
+                <td>22</td>
+                <td>2528</td>
+              </tr>
+              <tr>
+                <td>28.1.2021</td>
+                <td>100437</td>
+                <td>Android</td>
+                <td>Chrome</td>
+                <td>15</td>
+                <td>2128</td>
+              </tr>
+              <tr>
+                <td>27.1.2021</td>
+                <td>100408</td>
+                <td>iOS</td>
+                <td>Safari</td>
+                <td>12</td>
+                <td>1854</td>
+              </tr>
+              <tr>
+                <td>27.1.2021</td>
+                <td>100400</td>
+                <td>macOS</td>
+                <td>Safari</td>
+                <td>5</td>
+                <td>1220</td>
+              </tr>
+              <tr>
+                <td>27.1.2021</td>
+                <td>100328</td>
+                <td>Linux</td>
+                <td>Firefox</td>
+                <td>3</td>
+                <td>1054</td>
+              </tr>
+              <tr>
+                <td>26.1.2021</td>
+                <td>100331</td>
+                <td>Windows 7</td>
+                <td>Chrome</td>
+                <td>1</td>
+                <td>780</td>
+              </tr>
+              <tr>
+                <td>25.1.2021</td>
+                <td>100265</td>
+                <td>Windows 8</td>
+                <td>Edge</td>
+                <td>1</td>
+                <td>252</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="content-right">
+            <h2 style="padding-left: 10px;">Podíl zařízení za poslední měsíc</h2> 
+            <hr>
+            <img src="img/graf2.png" alt="Pie chart" style="max-width: 50%; max-height: 50%; padding-left: 10px; padding-left: 5%; padding-top: 1%;">
+            <p style="float: right; padding-right: 15%; padding-top: 5%;">
+              <span style="color: red;"><i class="fa-regular fa-circle"></i> Počítač 52%</span> <br> <br>
+              <span style="color: rgb(61, 88, 211)"><i class="fa-regular fa-circle"></i> Mobil 27%</span> <br> <br>
+              <span style="color:rgba(255, 217, 0, 0.932)"><i class="fa-regular fa-circle"></i> Tablet 21%</span>
+            </p>
+            <p>Chrome <span style="float: right; color: green;"><i class="fa-solid fa-sort-up"></i> 34%</span> <p>
+            <hr>
+            <p>Firefox <span style="float: right; color: green;"><i class="fa-solid fa-sort-up"></i> 10%</span> <p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>2021 © <span style="font-weight: bold"> Depth Charge Software s.r.o.</span> <span style="float: right; color: rgb(31, 63, 248);">Domovská stránka</span> </p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- ALT SIDEBAR
+<a href="#" style="background-color: rgb(61, 88, 211); color: white; height: 48px;text-align: center;padding-top: 12px;">DA</a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-table-cells-large"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-bookmark"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-pen-to-square"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-table"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-chart-bar"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-map"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-envelope"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-calendar-days"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-file-lines"></i></a>
+<a href="#" style="text-align: center;"><i class="fa-solid fa-sitemap"></i></a> -->
