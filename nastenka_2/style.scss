@@ -1,6 +1,21 @@
-@import "variables";
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// COLORS
+
+$bg-color: #f1f1f1;
+$my-blue: #3d58d3;
+$my-yellow: #ffc400;
+$my-grey: #333;
+$my-black: #111;
+
+// SIZES
+
+$gap-size: 30px;
+
+// FONTS
+
+$font-family: 'Open Sans', sans-serif;
+$text-size: 14px;
 
 * {
     box-sizing: border-box;
@@ -11,7 +26,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: row;
-    margin: 0px;
+    margin: 0;
     font-size: $text-size;
     font-family: $font-family;
 }
@@ -20,36 +35,39 @@ body {
     background: $my-black;
     color: #818181;
     flex: 1;
-    padding: 0px;
-    transition: 0.5s;
+    padding: 0;
+    transition: .5s;
 }
 
 .sidebar a {
-    padding-left: 10px;
-    padding-bottom: 15px;
-    padding-right: 5px;
+    padding: 0 5px 15px 10px;
     text-decoration: none;
     font-size: 18px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: .3s;
+}
+
+.sidebar a:hover {
+    color: #d8d8d8;
 }
 
 .sidebar p {
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    padding: 0 0 10px 15px;
+    margin: 0;
     font-size: 15px;
     color: #455050;
     display: block;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .column {
     display: flex;
     flex-direction: column;
     flex: 7;
+    @media (max-width: 850px) {
+        flex: 25;
+    }
 }
 
 .column.bigger {
@@ -65,31 +83,33 @@ body {
     color: white;
 }
 
+.card1, .card2, .card3, .card4 {
+    flex-basis: 25%;
+    min-height: 15vh;
+    max-height: 23vh;
+    @media (max-width: 850px) {
+        flex-basis: 50%;
+    }
+}
+
 .card1 h2, .card2 h2, .card3 h2, .card4 h2{
     font-size: 35px;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    margin: 1px 0 1px 0;
 }
 
 .card1 {
-    flex-basis: 25%;
-    min-height: 15vh;
     background: green;
 }
 
 .card2 {
-    flex-basis: 25%;
     background: $my-blue;
 }
 
 .card3 {
-    flex-basis: 25%;
-    min-height: 15vh;
     background: $my-yellow;
 }
 
 .card4 {
-    flex-basis: 25%;
     background: red;
 }
 
@@ -98,52 +118,35 @@ body {
     flex-wrap: wrap;
     text-align: left;
     justify-content: space-between;
-    align-items: flex-start
+    align-items: flex-start;
 }
 
-.left-side {
+.left-side, .right-side {
     flex-basis: 50%;
+    @media (max-width: 850px) {
+        flex-basis: 100%;
+  }
 }
 
-.right-side {
+.content-left, .content-left-bot, .content-right {
     flex-basis: 50%;
+    min-width: 60vh;
+    min-height: 30vh;
+    background: white;
 }
 
 .content-left {
-    flex-basis: 50%;
     min-height: 40vh;
-    background: white;
-}
-
-.content-left-bot {
-    flex-basis: 50%;
-    min-height: 30vh;
-    background: white;
-}
-
-.content-right {
-    flex-basis: 50%;
-    min-height: 30vh;
-    background: white;
-}
-
-@media (max-width: 800px) {
-    .left-side, .right-side {
-      flex-basis: 100%;
-    }
-    .card1, .card2, .card3, .card4 {
-        flex-basis: 50%;
-    }
 }
 
 .navbar {
     overflow: hidden;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 10px 5px black
 }
 
-.navbar a{
-    height: 5vh;
+.navbar a {
+    height: 50px;
     float: left;
     display: block;
     text-align: center;
@@ -151,23 +154,30 @@ body {
     text-decoration: none;
 }
 
+.navbar a:hover {
+    background-color: $my-grey;
+    color: white;
+}
+
 .navbar .search-container {
     float: left;
 }
 
 .navbar input[type=text] {
-    padding: 6px;
-    margin-top: 10px;
-    border-width: 1px;
+    padding: 10px 25px;
+    margin: 7px 0px 7px 50px;
+    border-radius: 3px;
+    border-width: .5px;
     border-color: $my-grey;
+    border-style: groove;
 }
 
 .navbar .search-container button {
     float: right;
-    padding: 7px 18px;
-    margin-top: 10px;
-    margin-right: 16px;
+    padding: 11px 25px;
+    margin: 7px 0px;
     background: $my-blue;
+    border-radius: 3px;
     color: white;
     border: none;
     cursor: pointer;
@@ -175,9 +185,8 @@ body {
 
 footer {
     background: white;
-    height: 5vh;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 4vh;
+    padding: 0 10px 5px;
 }
 
 .left-side div, .right-side div, .cards div {
@@ -203,6 +212,5 @@ footer {
     text-align: center;
     background-color: $my-grey;
     color: #f2f2f2;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0 12px;
 }
