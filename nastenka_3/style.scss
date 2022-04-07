@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// COLORS
+
+$bg-color: #f1f1f1;
+$my-blue: #3d58d3;
+$my-yellow: #ffc400;
+$my-grey: #333;
+$my-black: #111;
+
+// SIZES
+
+$gap-size: 30px;
+
+// FONTS
+
+$font-family: 'Open Sans', sans-serif;
+$text-size: 14px;
+
+// Breakpoints
+
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 920px;
+$md: 680px;
+$sm: 480px;
+
+body {
+    background: $bg-color;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    font-size: $text-size;
+    font-family: $font-family;
+}
+
+.sidebar {
+    background-color: $my-black;
+    color: #818181;
+  
+    height: 100vh;
+    z-index: 20;
+    position: sticky;
+    top: 0;
+    float: left;
+    overflow: hidden;
+    left: 0;
+  
+    width: 192px;
+
+    a{
+        &:hover {
+            color: #d8d8d8;
+        }
+    }
+
+    .sb-section {
+      padding-bottom: 14px;
+    }
+  
+    .sb-section-body {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: flex-start;
+      font-size: 25px;
+      gap: 20px;
+      padding-top: 20px;
+      padding-left: 15px;
+    }
+  
+    .sb-title-text-cl {
+        display: none;
+        }
+    
+    .sb-title-text {
+        display: block;
+        }
+    
+    .sb-section-header {
+        display: block;
+        font-size: 15px;
+        }
+    
+    .sb-item-text {
+        display: block;
+        font-size: 19px;
+        padding-left: 10px;
+        }
+    
+    .fa-chevron-left {
+        display: block;
+        }
+  
+    @media (max-width: $lg) {
+      &.open {
+        width: 64px;
+  
+        .sb-section-body {
+            align-items: center;
+            padding-left: 0;
+        }
+
+        .sb-title-text-cl {
+            display: block;
+        }
+    
+        .sb-title-text {
+          display: none;
+        }
+      
+        .sb-section-header {
+          display: none;
+        }
+      
+        .sb-item-text {
+          display: none;
+        }
+      
+        .fa-chevron-left {
+          display: none;
+        }
+        }
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    @media (max-width: $lg) {
+        grid-template-columns: 50% 50%;
+  }
+}
+
+.card {
+    background-color: green;
+    color: white;
+    h2 {
+        font-size: 35px;
+        margin: 1px 0 1px 0;
+    }
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-side, .right-side {
+    flex-basis: 50%;
+    @media (max-width: $lg) {
+        flex-basis: 100%;
+  }
+}
+
+.content-left, .content-left-bot, .content-right {
+    flex-basis: 50%;
+    min-height: 30vh;
+    background: white;
+    @media (max-width: $lg) {
+        flex-basis: 100%;
+  }
+}
+
+ .left-side div, .right-side div, .cards div {
+     border: 15px $bg-color solid;
+     padding: 10px;
+ }
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray
+}
+
+.navbar a {
+    height: 23px;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 5px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: $my-grey;
+    color: white;
+}
+
+.navbar .search-container {
+    float: left;
+}
+
+.navbar input[type=text] {
+    padding: 10px 150px 10px 25px;
+    margin: 7px 0px 7px 20px;
+    border-radius: 3px;
+    border-width: .5px;
+    border-color: $my-grey;
+    border-style: groove;
+    @media (max-width: $md) {
+        padding: 10px 0px 10px 25px;
+        margin: 7px 0px 7px 0px;
+  }
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 11px 25px;
+    margin: 7px 0px;
+    background: $my-blue;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: white;
+    height: 4vh;
+    padding: 0 10px 5px;
+}
+
+#users {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#users td, #users th {
+    text-align: center;
+    padding: 8px;
+}
+
+#users tr:nth-child(odd) {
+    background-color: #e1e1e1;
+}
+
+#users th {
+    text-align: center;
+    background-color: $my-grey;
+    color: $bg-color;
+    padding: 12px 0 12px;
+}
