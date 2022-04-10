@@ -36,8 +36,8 @@ body {
     font-family: $font-family;
 }
 
-.sidebar {
-    background-color: $my-black;
+.sidebar{
+    background: $my-black;
     color: #818181;
   
     height: 100vh;
@@ -93,9 +93,9 @@ body {
     .fa-chevron-left {
         display: block;
         }
-  
+    
     @media (max-width: $lg) {
-      &.open {
+        &.open{
         width: 64px;
   
         .sb-section-body {
@@ -122,7 +122,36 @@ body {
         .fa-chevron-left {
           display: none;
         }
-        }
+    }
+    }
+}
+
+.sidebar {
+    &.closed {
+    width: 64px;
+    .sb-section-body {
+        align-items: center;
+        padding-left: 0;
+    }
+    .sb-title-text-cl {
+        display: block;
+    }
+    
+    .sb-title-text {
+        display: none;
+    }
+        
+    .sb-section-header {
+        display: none;
+    }
+        
+    .sb-item-text {
+         display: none;
+    }
+        
+    .fa-chevron-left {
+        display: none;
+    }
     }
 }
 
@@ -143,6 +172,7 @@ body {
 .card {
     background-color: green;
     color: white;
+    padding: 15px;
     h2 {
         font-size: 35px;
         margin: 1px 0 1px 0;
@@ -151,31 +181,31 @@ body {
 
 .content {
     display: flex;
-    flex-wrap: wrap;
     text-align: left;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: flex-start;
+    @media (max-width: $lg) {
+        flex-direction: column;
+  }
 }
 
 .left-side, .right-side {
     flex-basis: 50%;
-    @media (max-width: $lg) {
-        flex-basis: 100%;
-  }
 }
 
 .content-left, .content-left-bot, .content-right {
     flex-basis: 50%;
     min-height: 30vh;
+    max-height: 60vh;
+    padding: 15px;
     background: white;
     @media (max-width: $lg) {
         flex-basis: 100%;
   }
 }
 
- .left-side div, .right-side div, .cards div {
-     border: 15px $bg-color solid;
-     padding: 10px;
+.left-side div, .right-side div, .cards div {
+    margin: 12px;
  }
 
 .navbar {
@@ -185,7 +215,7 @@ body {
 }
 
 .navbar a {
-    height: 23px;
+    height: 24px;
     float: left;
     display: block;
     text-align: center;
@@ -194,7 +224,7 @@ body {
 }
 
 .navbar a:hover {
-    background-color: $my-grey;
+    background: $my-grey;
     color: white;
 }
 
@@ -204,13 +234,13 @@ body {
 
 .navbar input[type=text] {
     padding: 10px 150px 10px 25px;
-    margin: 7px 0px 7px 20px;
+    margin: 7px 0 7px 20px;
     border-radius: 3px;
     border-width: .5px;
     border-color: $my-grey;
     border-style: groove;
     @media (max-width: $md) {
-        padding: 10px 0px 10px 25px;
+        padding: 10px 0 10px 25px;
         margin: 7px 0px 7px 0px;
   }
 }
@@ -218,7 +248,7 @@ body {
 .navbar .search-container button {
     float: right;
     padding: 11px 25px;
-    margin: 7px 0px;
+    margin: 7px 0;
     background: $my-blue;
     border-radius: 3px;
     color: white;
@@ -243,12 +273,12 @@ footer {
 }
 
 #users tr:nth-child(odd) {
-    background-color: #e1e1e1;
+    background: #e1e1e1;
 }
 
 #users th {
     text-align: center;
-    background-color: $my-grey;
+    background: $my-grey;
     color: $bg-color;
     padding: 12px 0 12px;
 }

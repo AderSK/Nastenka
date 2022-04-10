@@ -10,9 +10,9 @@
     <title>Nastenka</title>
 </head>
 <body>
-  <div class="sidebar">
+  <div class="sidebar open">
     <div class="sb-section" style="align-items: center;">
-      <div class="sb-section-body" style="color: white; background-color: #3d58d3; padding: 12px; font-size: 20px;">
+      <div class="sb-section-body" style="color: white; background: #3d58d3; padding: 12px; font-size: 20px;">
         <div class="sb-title-text-cl">DA</div>
         <div class="sb-title-text">DCSoft - Admin</div>
       </div>
@@ -35,7 +35,7 @@
 
   <div class="column">
     <div class="navbar">
-      <a href="#" onclick="togglesidebar()" style="float: left;"><i class="fa-solid fa-bars" style="font-size: 20px; padding: 0 10px;"></i></a>
+      <a href="#" onclick="toggleSidebar()" style="float: left;"><i class="fa-solid fa-bars" style="font-size: 20px; padding: 0 10px;"></i></a>
       <div class="search-container">
         <form action="">
           <input type="text" placeholder="Vyhledat" name="search">
@@ -43,7 +43,7 @@
         </form>
       </div>
       <a style="float: right;"> Admin <i class="fa-solid fa-chevron-down"></i></a>
-      <a style="float: right; padding-top: 10px;"> <img style="width: 30px;" src="img/profile.png" alt="Profile"> </a>
+      <a style="float: right; padding: 14px 5px;"> <img style="width: 30px;" src="img/profile.png" alt="Profile"> </a>
     </div>
     <main>
       <div class="cards">
@@ -52,17 +52,17 @@
           <p>NOVÝCH UŽIVATELŮ</p>
           <p><i class="fa-solid fa-turn-up"></i> 10%</p>
         </div>
-        <div class="card" style="background-color: #3d58d3">
+        <div class="card" style="background: #3d58d3">
           <h2>2500</h2>
           <p>ZOBRAZENÍ</p>
           <p><i class="fa-solid fa-turn-up"></i> 25%</p>
         </div>
-        <div class="card" style="background-color: #ffc400">
+        <div class="card" style="background: #ffc400">
           <h2>270</h2>
           <p>PROKLIKŮ</p>
           <p><i class="fa-solid fa-turn-down"></i> -4%</p>
         </div>
-        <div class="card" style="background-color: red">
+        <div class="card" style="background: red">
           <h2>138</h2>
           <p>SDÍLENÍ</p>
           <p><i class="fa-solid fa-turn-down"></i> -8%</p>
@@ -71,16 +71,16 @@
       <div class="content">
         <div class="left-side">
           <div class="content-left">
-            <h2 style="padding-left: 10px;">Statistika návštěvnosti</h2>
-            <p style="float: left; padding-left: 10px;"> <span style="color: rgb(61, 88, 211);">⬤</span> Minulý měsíc <span style="color: green;">⬤</span> Tento měsíc</p>
-            <p style="float: right; padding-right: 10px;">
+            <h2 style="padding-left: 10px">Statistika návštěvnosti</h2>
+            <p style="float: left; padding: 0;"> <span style="color: rgb(61, 88, 211);">⬤</span> Minulý měsíc <span style="color: green;">⬤</span> Tento měsíc</p>
+            <p style="float: right; padding: 0;">
               <span style="font-size: 18px;"><i class="fa-solid fa-up-long" style="color: green;"></i> 10%</span>
               <br>
               Průmněrný nárůst
             </p>
             <img src="img/graf1.png" style="max-width: 100%; padding-top: 40px;" alt="Graph">
           </div>
-          <div class="content-left-bot" style="padding: 0px;">
+          <div class="content-left-bot" style="padding: 0;">
             <table id="users">
               <tr>
                 <th>Naposledy</th>
@@ -151,10 +151,10 @@
         </div>
         <div class="right-side">
           <div class="content-right">
-            <h2 style="padding-left: 10px;">Podíl zařízení za poslední měsíc</h2> 
+            <h2>Podíl zařízení za poslední měsíc</h2> 
             <hr>
-            <img src="img/graf2.png" alt="Pie chart" style="max-width: 50%; max-height: 50%; padding-left: 10px; padding-left: 5%; padding-top: 1%;">
-            <p style="float: right; padding-right: 15%; padding-top: 5%;">
+            <img src="img/graf2.png" alt="Pie chart" style="max-width: 50%; max-height: 50%; padding-left: 5%; padding-top: 1%;">
+            <p style="float: right; padding-right: 8%; padding-top: 5%;">
               <span style="color: red;"><i class="fa-regular fa-circle"></i> Počítač 52%</span> <br> <br>
               <span style="color: rgb(61, 88, 211)"><i class="fa-regular fa-circle"></i> Mobil 27%</span> <br> <br>
               <span style="color:rgba(255, 217, 0, 0.932)"><i class="fa-regular fa-circle"></i> Tablet 21%</span>
